@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Recommandation</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.0" type="text/css">
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type='text/javascript' src='js/index.js'> </script>
+
+  </head>
+
+  <body>
+  <h1 style="margin-left:590px; color:#BBDEFB; ">Course Recommendation System</h1>
+  <div class="testbox">
+
+    <form id='login' onsubmit='return check_username()' action='/login' method='post'>
+    <div style="margin-top: 85px; margin-left: -12px">
+        <label id="existusername_label">
+        <span class="label">Username:</span>
+        <input class='userinfo' type='text' name='username' required>
+        <input id="loginbtn" type='submit' value='Login'>
+        </label>
+    </div>
+    </form>
+
+    <form id='newuser' action='/newuser' method='post' style='display:none'>
+    <div class="formdiv" id="firstdiv">
+        <label id="username_label">
+        <span class="label">Username:</span>
+        <input class='userinfo' type='text' name='username' required>
+        </label>
+    </div>
+    <br>
+    <div class="formdiv">
+        <label id="userper_label">
+        <span class="label">Permission:</span>
+        <input class='userinfo' type='text' name='permission' placeholder=" '0' or '1'" pattern="[0-1]{1}">
+        </label>
+    </div>
+    <br>
+    <div class="formdiv">
+        <label id="userage_label">
+        <span class="label">Age:</span>
+        <input class='userinfo' type='text' name='age' pattern="[1]{1}[5-9]{1}|[2-9]{1}[0-9]{1}">
+        </label>
+    </div>
+    <br>
+    <div class="formdiv">
+        <label id="usergender_label">
+        <span class="label">Gender:</span>
+        <input class='userinfo' type='text' name='gender' placeholder=" 'f' or 'm'" pattern="[fm]{1}">
+        </label>
+    </div>
+    <br>
+    <div class="formdiv">
+        <label id="usergender_label">
+        <span class="label">Native Country:</span>
+        <input class='userinfo' type='text' name='native_country' required>
+        </label>
+    </div>
+    <br>
+       <input id="create" type='submit' value='Create'>
+    </form>
+
+    <button id='tab' onclick='tab()'>New User </button>
+
+    </div>
+
+  </body>
+</html> 

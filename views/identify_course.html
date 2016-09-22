@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Recommandation</title>
+    <link rel='stylesheet' type='text/css' href='css/identify_course.css'>
+    <script>
+        function identify(){
+           window.location.href='/topic_interest';
+        }
+    </script>
+  </head>
+
+  <body>
+    <main>
+      <h1>You have choosen {{packages.length}} courses, please identify</h1>
+      <ul>
+      {{#each packages}}
+        <li>
+          {{this.course_dept}}{{this.course_num}}
+        </li>
+      {{/each}}
+      </ul>
+      <button onclick='identify()'>Confirm</button>
+    </main>  
+  </body>
+</html> 

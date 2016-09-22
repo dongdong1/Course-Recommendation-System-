@@ -1,0 +1,37 @@
+body{
+	background-color:#cfe0ff;
+    
+}
+
+li{
+    font-size: 1.5rem;
+    padding-top:4px;
+}
+
+ul{
+    margin-left:42%;
+}
+
+h1{
+        color:#660033;
+        text-align: center;
+}
+
+button {
+  
+	background: linear-gradient(to bottom, #25c7b1, #404494); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width:10%;
+    cursor: pointer;
+    border-radius:15px;
+     margin-left:42%;
+}
+
+button:hover{
+	background:#25c7b1;
+}

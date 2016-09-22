@@ -1,0 +1,73 @@
+ body{
+  background-color:#cfe0ff;
+}
+
+h1{
+  font-size:33px;
+  text-align: center;
+  color:#660033;
+}
+
+.rec_course{
+  position:absolute;
+  left:42%;
+  top:95px;
+}
+
+.rec_course ul li{
+    font-size:22px;
+    padding-top:9px;
+}
+
+.submit_btn {
+  
+    background: linear-gradient(to bottom, #25c7b1, #404494); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:13%;
+    height:25px;
+    font-size:14px;
+    cursor: pointer;
+    border-radius:15px;
+    margin-left:8.5%;
+}
+
+.submit_btn:hover{
+  background:#25c7b1;
+}
+
+.recommend button{
+  background: linear-gradient(to bottom, #3f51b5, #673ab7); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width:14%;
+    height:35px;
+    font-size:15px;
+    cursor: pointer;
+    border-radius:17px;
+}
+
+.recommend button:hover{
+  background:#3f51b5;
+}
+
+.before_exit{
+   padding-top:10px;
+   padding-left:30%;
+}
+
+.before_exit p{
+  font-weight:bold;
+}
+
+
+.recommend{
+    padding-top:12px;
+    padding-left:22%;
+}

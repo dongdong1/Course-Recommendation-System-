@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Recommandation</title>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js" defer></script>
+    <link rel='stylesheet' type='text/css' href='css/collecting_course.css'>
+    <script>
+    function collect(){
+          var course_taken='{"course_taken":"[';
+          for(var i=1;i<={{packages.length}};i++){
+            if($('#'+i).prop('checked')==true)
+            {
+              course_taken+=i+',';
+            }
+          }
+          if(course_taken[course_taken.length-1]==',')
+          course_taken=course_taken.substring(0,course_taken.length-1);
+          course_taken+=']"}';
+          var data=JSON.parse(course_taken);
+          console.log(data);
+          $.ajax({
+            url:'/collect',
+            method:'post',
+            data:data,
+            dataType:"json",
+            success:function(data){
+              console.log('Collecting course complete!');
+              window.location.href='/topic_interest';
+            }
+          });
+
+      }</script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Choose the courses you have taken</h1>
+      {{#each packages}}
+      <ul>
+        <li>
+           <input type="checkbox" id={{this.course_id}}> 
+          {{this.course_dept}}{{this.course_num}}
+        </li>
+      </ul>
+      {{/each}}
+      <button onclick='collect()'>Confirm</button>
+    </main>
+  </body>
+</html> 

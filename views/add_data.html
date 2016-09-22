@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add Data</title>
+     <link rel='stylesheet' type='text/css' href='css/add_data.css'>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js" defer></script>
+    <script type="text/javascript" src="js/add_data.js" ></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Please add your own data</h1>
+      <section class='course_rank' style='display:none'>
+       <form name='rank_course'  onsubmit='return success()' method='post' action='/rank_course'>
+        <table>
+          <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Grade</th>
+            <th>Course Rank</th>
+            <th>Instructor Rank</th>
+          </tr>
+        {{#each packages}}
+           <tr>
+            <td  style="text-align:center">
+              {{this.course_id}}
+              <input type='hidden' name='course_id' value={{this.course_id}}>
+            </td>
+            <td  style="text-align:center">{{this.dept_code}}{{this.course_number}}</td>
+            <td  style="text-align:center"><select name='grade'>
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="C-">C-</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+            <option value="D-">D-</option>
+            <option value="F">F</option>
+            </select></td>
+
+            <td  style="text-align:center"><select name='c_rank'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option> 
+            </select></td>
+
+            <td  style="text-align:center"><select name='ins_rank'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option> 
+            </select></td>
+           </tr>
+        {{/each}}
+        </table>
+            <input type='submit'  class='add_btn' value='Confirm'>
+       </form>
+      </section>
+        
+      <section class='control'>  
+        <p><button onclick='course_rank()'>Rank Course</button></p>
+        <p><button onclick='add_new_topic()'>New Topic</button></p>
+        <p><button onclick='add_new_skill()'>New Skill</button></p>
+        <p> <button type='button' onclick='exit()'>Exit</button></p>
+      </section>
+
+      <section class='new_topic' style='display:none'>
+        <form name='new_topic' onsubmit='return success()' method='post' action='/new_topic'>
+         <table>
+          <tr>
+            <th>Topic Name</th>
+            <th>Relevant Course</th>
+            <th style='padding-left:15px'>Interest Before</th>
+             <th style='padding-left:15px'>Interest After</th>
+          </tr>
+          <tr>
+            <td  style="text-align:center">
+             <input type='text' name='topic_name' required>
+           </td>
+           <td  style="text-align:center">
+             <select name='rele_course'>
+              {{#each packages}}
+              <option value="{{this.course_id}}">{{this.dept_code}}{{this.course_number}}</option>
+              {{/each}}
+             </select>
+           </td>
+           <td  style="text-align:center">
+             <select name='interest_before'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option> 
+            </select></td>
+           </td> 
+            <td  style="text-align:center">
+              <select name='interest_after'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>  
+              </select></td>
+            </td> 
+          </tr>  
+         </table>   
+          <input type='submit'  class='add_btn' value='Add'> 
+        </form>
+      </section>
+
+      <section class='new_skill' style='display:none'>
+        <form name='new_skill' onsubmit='return success()' method='post' action='/new_skill'>
+         <table>
+          <tr>
+            <th>Skill Name</th>
+            <th>Relevant Course</th>
+            <th style='padding-left:15px'>Rank Before</th>
+             <th style='padding-left:15px'>Rank After</th>
+          </tr>
+          <tr>
+            <td  style="text-align:center">
+             <input type='text' name='skill_name' required>
+           </td>
+           <td  style="text-align:center">
+             <select name='rele_course'>
+              {{#each packages}}
+              <option value="{{this.course_id}}">{{this.dept_code}}{{this.course_number}}</option>
+              {{/each}}
+             </select>
+           </td>
+           <td  style="text-align:center">
+              <select name='rank_before'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option> 
+            </select></td>
+           </td> 
+            <td  style="text-align:center">
+              <select name='rank_after'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>  
+              </select></td> 
+            </td> 
+          </tr>  
+         </table>   
+          <input type='submit'  class='add_btn' value='Add'> 
+        </form>
+      </section>
+    </main>
+  </body>
+</html> 

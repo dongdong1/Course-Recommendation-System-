@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Recommandation</title>
+    <link rel='stylesheet' type='text/css' href='css/recommendation.css'>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js" defer></script>
+    <script type="text/javascript" src="js/recommendation.js" ></script>
+  </head>
+
+
+    <main>
+     <h1 class='ask'>What do you think is the most important for the recommend courses</h1>
+    <section class='choosetype' >
+     <h1 id='grade' style="display:none">
+      Recommend courses with the best predicted grade
+     </h1>
+     <h1 id='interest' style="display:none">
+      Recommend courses which promote my interests
+     <h1>
+     <h1 id='skill' style="display:none">
+      Recommend courses which improve my skills
+     </h1>
+     <h1 id='happy' style="display:none">
+      Recommend courses which make me happy
+     </h1>
+    <body> 
+    </section>
+
+    <section class='choosebutton'>
+      <p class='recommend'><button onclick='grade()' >Good Grades</button></p>
+      <p class='recommend'><button onclick='interest()'>Promote Interests</button></p>
+      <p class='recommend'><button onclick='skill()'>Improve Skills</button></p>
+      <p class='recommend'><button onclick='happy()'>Happiness</button></p>
+    </section>
+
+    <section class='rec_course'>
+    </section>
+
+    <section class='before_exit'>
+      <p>Before exit, do you want to add your data to our system for better recommendation?</p>
+      <button onclick='add_data()' class='submit_btn'>Yes, Add my data</button>
+      <button onclick='exit()' class='submit_btn'>No, Exit directly</button>
+    </section>
+
+    </main>
+  </body>
+</html> 

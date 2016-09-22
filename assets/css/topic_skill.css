@@ -1,0 +1,49 @@
+ body{
+  background-color:#cfe0ff;
+}
+
+h1{
+  padding-left:4%;
+  margin-left:0px;
+  color:#660033;
+}
+
+table{
+  margin-left:17%;
+}
+
+h1{
+  margin-left:24.5%;
+}
+
+td.dept{
+  font-family:courier;
+}
+
+th{
+  font-size:18px;
+}
+
+td{
+  font-size:18px;
+}
+
+.submit_btn {
+  
+  background: linear-gradient(to bottom, #25c7b1, #404494); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:18%;
+    height:25px;
+    font-size:14px;
+    cursor: pointer;
+    border-radius:15px;
+    margin-left:41%;
+}
+
+.submit_btn:hover{
+  background:#25c7b1;
+}

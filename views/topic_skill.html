@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Course Recommandation</title>
+     <link rel='stylesheet' type='text/css' href='css/topic_skill.css'>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js" defer></script>
+    <script>
+    function validate_topic(){
+        var length=0;
+        for(var i=0;i<{{packages.length}};i++){
+           if(document.forms['topic']['t'+i]!=undefined && document.forms['topic']['t'+i].value!=''){ 
+               length++;
+            }
+        }
+        if(length<5){alert('Rank at least 5 topics!');return false;}
+      }
+    function validate_skill(){
+        var length=0;
+        for(var i=0;i<{{packages.length}};i++){
+           if(document.forms['skill']['s'+i]!=undefined && document.forms['skill']['s'+i].value!=''){
+               length++;
+             }
+        }
+        if(length<5){alert('Rank at least 5 skills!');return false;}
+      }</script>
+  </head>
+
+  <body>
+    <main>
+      
+      <form name='topic' onsubmit='return validate_topic()' method='post' action='/topic_finish' style='display:{{method1}}'>
+      <h1>Please rank the interest of following topics</h1>
+      <table>
+          <tr>
+            <th>Department</th>
+            <th>Name</th>
+            <th>Rank</th>
+          </tr>
+
+          {{#each packages}}
+          <tr>
+            <td style="text-align:center" class='dept'>{{this.dept_name}}</td>
+            <td style="text-align:center" >{{this.topic}}</td>
+            <td>
+              1<input type='radio' name=t{{this.topic_id}}
+              value='1' style='margin-right:9px'>
+              2<input type='radio' name=t{{this.topic_id}}
+              value='2' style='margin-right:9px'>
+              3<input type='radio' name=t{{this.topic_id}}
+              value='3' style='margin-right:9px'>
+              4<input type='radio' name=t{{this.topic_id}} 
+              value='4' style='margin-right:9px'>
+              5<input type='radio' name=t{{this.topic_id}} 
+              value='5' style='margin-right:9px'>
+            </td>
+          </tr>       
+      {{/each}}
+
+      </table>
+      <input class='submit_btn' type='submit' value='Confirm'>
+      </form>
+
+      <form name='skill' onsubmit='return validate_skill()' method='post' action='/skill_finish' style='display:{{method2}}'>
+      <h1>Please rank the interest of following skills</h1>
+      <table>
+          <tr>
+            <th>Department</th>
+            <th>Name</th>
+            <th>Rank</th>
+          </tr>
+
+          {{#each packages}}
+          <tr>
+            <td style="text-align:center" class='dept'>{{this.dept_name}}</td>
+            <td style="text-align:center" >{{this.skill}}</td>
+            <td>
+              1<input type='radio' name=s{{this.skill_id}}
+              value='1' style='margin-right:8px'>
+              2<input type='radio' name=s{{this.skill_id}} 
+              value='2' style='margin-right:8px'>
+              3<input type='radio' name=s{{this.skill_id}} 
+              value='3' style='margin-right:8px'>
+              4<input type='radio' name=s{{this.skill_id}} 
+              value='4' style='margin-right:8px'>
+              5<input type='radio' name=s{{this.skill_id}}
+              value='5' style='margin-right:8px'>
+            </td>
+          </tr>       
+      {{/each}}
+
+      </table>
+      <input class='submit_btn' type='submit' value='Confirm'>
+      </form>
+    </main>
+  </body>
+</html> 

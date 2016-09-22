@@ -1,0 +1,131 @@
+body,
+input,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #4c4c4c;
+}
+body{
+  display: inline;
+}
+
+html{
+  /*background-color: #BBDEFB;*/
+  background-image: url("../picture/book1.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  
+}
+
+.testbox {  
+  margin: 40px auto;
+  width: 325px; 
+  height: 320px; 
+  -webkit-border-radius: 8px/7px; 
+  -moz-border-radius: 8px/7px; 
+  border-radius: 8px/7px; 
+  background-color:#FCE4EC; 
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+  margin-right: 440px;
+  margin-bottom: 100px;
+}
+
+form{
+  margin: 0 10px;
+}
+.label{
+  width:35%;
+  float:left;
+  text-align: right;
+}
+#create{
+  padding-top: 2px;
+  margin-top: 48px;
+  margin-left: -114px;
+  position: absolute;
+  width: 104px;
+}
+
+#loginbtn{
+  padding-top: 2px;
+  margin-left: -114px;
+  margin-top:63px;
+  position: absolute;
+  width: 104px;
+}
+
+.formdiv{
+  margin-top:30px;
+}
+
+#firstdiv{
+    margin-top: 36px;
+}
+.userinfo{
+  width: 68%;
+  margin-left: 30px;
+  float: left;
+}
+
+#tab{
+  padding-top: 2px;
+  margin-top: 30px;
+  margin-left: 38px;
+
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  padding: 1px 6px 5px 2px;
+  text-decoration: none;
+  width: 104px; height: 27px; 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px; 
+  background-color: #80DEEA; 
+  -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
+  -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
+  box-shadow: 0 3px rgba(58,87,175,.75);
+  transition: all 0.1s linear 0s; 
+}
+
+#tab:hover{
+   background-color:#64b5f6;
+}
+
+input[type=text]{
+  width: 150px; 
+  height: 30px; 
+  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
+  background-color: #fff; 
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  border: solid 1px #cbc9c9;
+}
+input[type=submit]{
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  padding: 6px 6px 5px 2px;
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+  width: 70px; height: 27px; 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px; 
+  background-color: #80DEEA; 
+  -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
+  -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
+  box-shadow: 0 3px rgba(58,87,175,.75);
+  transition: all 0.1s linear 0s; 
+}
+
+input[type=submit]:hover{
+  background-color:#64b5f6;
+}

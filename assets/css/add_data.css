@@ -1,0 +1,87 @@
+ body{
+  background-color:#cfe0ff;
+}
+
+h1{
+  text-align: center;
+  color:#660033;
+}
+
+
+.control button{
+  
+  background: linear-gradient(to bottom,  #3f51b5, #673ab7); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width:14%;
+    height:35px;
+    font-size:15px;
+    cursor: pointer;
+    border-radius:17px;
+}
+
+.control button:hover{
+  background:#3f51b5;
+}
+
+.control p{
+    padding-top:12px;
+    padding-left:22%;
+}
+
+.course_rank{
+  position:absolute;
+  left:36%;
+  top:95px;
+}
+
+.new_topic{
+  position:absolute;
+  left:36%;
+  top:110px;
+}
+
+.new_skill{
+  position:absolute;
+  left:36%;
+  top:110px;
+}
+
+.add_btn{
+    background: linear-gradient(to bottom, #25c7b1, #404494); 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width:15%;
+    height:25px;
+    font-size:14px;
+    cursor: pointer;
+    border-radius:15px;
+    margin-left:43%;
+    margin-top:10px;
+}
+
+.add_btn:hover{
+  background:#25c7b1;
+}
+
+
+
+select{
+    font-size:30px;
+}
+
+th{
+    font-size:18px;
+    padding-right:3px;
+}
+
+td{
+    padding-right:3px;
+}
+
